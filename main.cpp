@@ -9,31 +9,30 @@ using namespace std;
 
 
 //file in/output stream definitions
-ifstream fin;
-ofstream fout;
+ifstream file_1;
+ifstream file_2;
 
-fin.open("firstFile.txt");       //opening input file
+file_1.open("firstFile.txt");       //opening input file
 
-
-if (fin.fail())     //file-input error messages
+if (file_1.fail())     //file-input error messages
 {
-    cerr << "Well, this is embarrassing.  I wasn't able to open your INPUT file. :(\n";
+    cout << "Well, this is embarrassing.  I wasn't able to open your first INPUT file. :(\n";
     exit(1);
 
 }
 
 
-fout.open("firstFile.txt");    //opening output file
+file_2.open("secondFile.txt") // opens second
 
 
-if (fout.fail())        //file-output error messages
+if (file_2.fail())        //file-output error messages
 {
-    cerr << "Well, this is embarrassing.  I wasn't able to open your OUTPUT file. :(\n";
+    cout << "Well, this is embarrassing.  I wasn't able to open your second INTPUT file. :(\n";
     exit(1);
 
 }
 
 /closing the files
 
-fin.close();
-fout.close();
+file_1.close();
+file_2.close();
